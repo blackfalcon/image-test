@@ -1,0 +1,29 @@
+img {
+  display: block;
+}
+
+[class*='button'] {
+  width: 100px;
+  height: 40px;
+}
+
+.standard-button {
+  background: url(images/button.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.hidpi-button {
+  background: url(images/button_2x.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.dppx-button {
+  background: url(images/button_2dppi.png) no-repeat 0 0;
+  background-size: 100%;
+}
+
+.image-set {
+  background: -webkit-image-set( url(images/button.png) 1x, url(images/button_2x.png) 2x);
+  width: 100px;
+  height: 40px;
+}
