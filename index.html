@@ -6,20 +6,50 @@
 <body>
 
   <h2>The following are CSS background-image examples</h2>
+  <p>The following images are included in the view by using CSS. Two different sizes and two different resolutions. All assets are have the size attribute value of width: 400px and height:40px. When you are seeing an asset with 800px x 80px, these are the 2x assets.</p>
 
-  <div class="standard-button"></div>
-  <div class="hidpi-button"></div>
-  <div class="dppx-button"></div>
+  <div class="standard-banner"></div>
+  <div class="hidpi-banner"></div>
+  <div class="dppx-banner"></div>
 
   <h2>the following are img src added images</h2>
+  <p>Gives us few options for managing hidpi assets. The following illustrates using the img tag with no additional size attributes.</p>
 
-  <img src="images/button.png">
-  <img src="images/button_2x.png">
-  <img src="images/button_2dppi.png">
+  <img src="images/banner_1x.png">
+  <img src="images/banner_2x.png">
+  <img src="images/banner_2dppx.png">
+
+  <p>The following uses the height and width attribute on the 2x asset</p>
+
+  <img src="images/banner_1x.png">
+  <img src="images/banner_2x.png" width="400" height="40">
+  <img src="images/banner_2dppx.png">
+
+  <p>The following example illustrates the example using the img tag and CSS.</p>
+  <div class="src-container">
+    <img src="images/banner_1x.png">
+    <img src="images/banner_2x.png">
+    <img src="images/banner_2dppx.png">
+  </div>
 
   <h2>using -webkit-image-set</h2>
+  <p>Deliver preferred asset based on device pixel density. It doesn't work in Mozilla</p>
 
   <div class="image-set"></div>
+
+  <h2>Using media queries</h2>
+  <p>Deliver the preferred asset based on device pixel density</p>
+
+  <div class="image-query"></div>
+
+  <h2>Proof!</h2>
+  <p>The following images are completely different. The one on the left is 800x1100 at 10dpi with no jpg compression. The image on the right is also 800x1100 at 72dpi with 100% jpg compression and a 93% reduction in file size. </p>
+
+  <p>Difference in image quality on my Macbook Pro with high retina screen, is minimal at standard viewing distance. Yes, there is some color fragging on the lightsaber and other places, but you have to look close to see that.</p>
+  <div class="compare">
+    <img src="images/star-wars.jpg" width="400">
+    <img src="images/star-wars-optimized.jpg" width="400">
+  </div>
 
 </body>
 </html>

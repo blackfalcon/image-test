@@ -1,29 +1,57 @@
-img {
-  display: block;
+body {
+  padding-bottom: 100px;
 }
 
-[class*='button'] {
-  width: 100px;
+img {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.compare img {
+  display: inline-block;
+}
+
+.src-container img {
+  width: 400px;
   height: 40px;
 }
 
-.standard-button {
-  background: url(images/button.png) no-repeat 0 0;
+[class*='banner'] {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.standard-banner {
+  background: url(images/banner_1x.png) no-repeat 0 0;
   background-size: 100%;
 }
 
-.hidpi-button {
-  background: url(images/button_2x.png) no-repeat 0 0;
+.hidpi-banner {
+  background: url(images/banner_2x.png) no-repeat 0 0;
   background-size: 100%;
 }
 
-.dppx-button {
-  background: url(images/button_2dppi.png) no-repeat 0 0;
+.dppx-banner {
+  background: url(images/banner_2dppx.png) no-repeat 0 0;
   background-size: 100%;
 }
 
 .image-set {
-  background: -webkit-image-set( url(images/button.png) 1x, url(images/button_2x.png) 2x);
-  width: 100px;
+  background: -webkit-image-set( url(images/banner_1x.png) 1x, url(images/banner_2x.png) 2x);
+  width: 400px;
   height: 40px;
+}
+
+.image-query {
+  background: url(images/banner_1x.png) no-repeat 0 0;
+  width: 400px;
+  height: 40px;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .image-query {
+    background: url(images/banner_2x.png);
+    background-size: 100%;
+  }
 }
