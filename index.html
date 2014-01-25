@@ -1,55 +1,65 @@
 <html>
 <head>
-  <title>this is a test view</title>
+  <title>Image test</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
   <h2>The following are CSS background-image examples</h2>
-  <p>The following images are included in the view by using CSS. Two different sizes and two different resolutions. All assets are have the size attribute value of width: 400px and height:40px. When you are seeing an asset with 800px x 80px, these are the 2x assets.</p>
+  <p>The following images are included in the view by using <code>background-image</code> in CSS. Two different sizes and resolutions. All assets are have the size attribute value of <code>width: 400px</code> and <code>height:40px</code>. When you are seeing an asset with 800px x 80px, this is the 2x assets.</p>
+
+  <p>The real proof is when you zoom in on the banner images. If you are on a retina device you will see a clear difference between the 800x80px banners and the 400x40px banners.</p>
 
   <div class="standard-banner"></div>
   <div class="hidpi-banner"></div>
   <div class="dppx-banner"></div>
 
-  <h2>the following are img src added images</h2>
-  <p>Gives us few options for managing hidpi assets. The following illustrates using the img tag with no additional size attributes.</p>
+  <h2>The following uses the HTML <code>img src</code> tag to add the images</h2>
+  <p>HTML alone gives us few options for managing hidpi assets. The following illustrates using the <code>img</code> tag with no additional size attributes.</p>
 
   <img src="images/banner_1x.png">
   <img src="images/banner_2x.png">
   <img src="images/banner_2dppx.png">
 
-  <p>The following uses the height and width attribute on the 2x asset</p>
+  <p>The following examples use the height and width attribute on the 2x asset only to reduce the physical size.</p>
 
   <img src="images/banner_1x.png">
   <img src="images/banner_2x.png" width="400" height="40">
   <img src="images/banner_2dppx.png">
 
-  <p>The following example illustrates the example using the img tag and CSS.</p>
+  <p>The following example illustrates the example using the <code>img</code> tag and CSS to reduce the physical size.</p>
   <div class="src-container">
     <img src="images/banner_1x.png">
     <img src="images/banner_2x.png">
     <img src="images/banner_2dppx.png">
   </div>
 
-  <h2>using -webkit-image-set</h2>
-  <p>Deliver preferred asset based on device pixel density. It doesn't work in Mozilla</p>
+  <h2>Technique using <code>-webkit-image-set</code></h2>
+  <p>The proposed <code>-webkit-image-set</code> will deliver the preferred asset based on device pixel density. Feature works in Safari, Chrome and Opera.</p>
 
   <div class="image-set"></div>
 
-  <h2>Using media queries</h2>
+  <h2>Technique using media queries</h2>
   <p>Deliver the preferred asset based on device pixel density</p>
 
   <div class="image-query"></div>
 
-  <h2>Proof!</h2>
+  <h2>Proof that dpi is meaningless</h2>
   <p>The following images are completely different. The one on the left is 800x1100 at 10dpi with no jpg compression. The image on the right is also 800x1100 at 72dpi with 100% jpg compression and a 93% reduction in file size. </p>
 
-  <p>Difference in image quality on my Macbook Pro with high retina screen, is minimal at standard viewing distance. Yes, there is some color fragging on the lightsaber and other places, but you have to look close to see that.</p>
+  <p>Difference in image quality, on my Macbook Pro with high retina screen, is minimal at standard viewing distance. Yes, there is some color fragging on the lightsaber and other places, but you have to look close to see that.</p>
   <div class="compare">
     <img src="images/star-wars.jpg" width="400">
     <img src="images/star-wars-optimized.jpg" width="400">
   </div>
+
+  <h2>The 1:96 CSS fixed ratio</h2>
+  <p>The following blocks are created using CSS. The Green block is 96x96px. The orange square is 1x1". </p>
+
+  <div class="css-inch"></div>
+  <p>96px square</p>
+  <div class="css-px-inch"></div>
+  <p>1in square</p>
 
 </body>
 </html>
