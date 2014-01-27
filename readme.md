@@ -2,6 +2,8 @@
 
 The last part of the designer in me just officially died 
 
+[example view](http://www.anotheruiguy.com/hidpi-images/index.html)
+
 ### The point of this exercise 
 
 Image quality and clarity has been something of a mystery to me as I do not actually have to deal with pixel based image assets in my day to day work. Nearly all of my visuals are created using CSS. This left we with a hole of understanding. 
